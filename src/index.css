@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Metamorphous');
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  background-image: url('img/planets.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+nav .topleft {
+  list-style: none;
+  padding-top: 20px;
+}
+nav .topleft li {
+  margin-right: 50px;
+  display: block;
+  float: right;
+  font-size: 16.8px;
+  color: white;
+  text-transform: uppercase;
+}
+nav .topleft li a {
+  font-family: "Helvetica";
+  text-decoration: none;
+  color: white;
+}
+nav .topleft li a:hover {
+  color: red;
+}
+.red {
+  color: #ff1600 !important;
+}
+p {
+  color: ghostwhite;
+  font-family: 'Metamorphous';
+}
+h1 {
+  font-family: 'Metamorphous';
+}
+.star {
+  padding-top: 220px;
+  text-align: center;
+  height: 800px;
+  /*border: solid 1px white;*/
+  background-image: url('img/star.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*opacity: 0.5;*/
+}
+.wrap {
+  height: 100%;
+}
+.cont {
+  height: 100%;
+}
+.mainWrap {
+  height: calc(90%);
+}
+.upMenu {
+  margin-bottom: 2%;
+}
+.coal {
+  color: white;
+  text-transform: uppercase;
+  font-size: 90px;
+  font-family: 'Metamorphous';
+  margin-top: 120px;
+}
+.aboutWrap {
+  height: 80%;
+  width: 80%;
+}
+.loginWrap {
+  border: dashed 1px grey;
+  border-radius: 20px;
+  margin-top: 10%;
+  background-color: rgba(152, 193, 246, 0.1);
+}
+.loginWrap p.loginTitle {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Metamorphous';
+  color: white;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.loginWrap p {
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Metamorphous';
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 0px;
+}
+.loginWrap input {
+  margin-top: 12px;
+  border-radius: 6px;
+  height: 46px;
+  /*width: 300px;*/
+  border: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 25px;
+  margin-bottom: 30px;
+  /*margin-left: 40px;
+    margin-right: 40px;*/
+}
+.loginWrap .loginBut {
+  text-transform: uppercase;
+  /*opacity: 0.5;*/
+  font-family: 'Metamorphous';
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.loginWrap .loginBut:hover {
+  opacity: 1;
+  font-family: 'Metamorphous';
+  color: red;
+}
+.sleepers {
+  background-image: url('img/wrecks.png');
+  height: 85%;
+  margin-top: 3%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+  border: dotted 2px rgba(128, 128, 128, 0.67);
+}
+.sleepers h1 {
+  margin-top: 20%;
+  font-size: 90px;
+  color: rgba(211, 211, 211, 0.64);
+  text-align: center;
+}
+.sleepers p {
+  font-size: 60px;
+  color: rgba(10, 10, 10, 0.75);
+  text-align: center;
+}
+.cname {
+  font-family: 'Metamorphous';
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -225px;
+  color: white;
+  font-size: 122px;
+}
+.regBut {
+  margin-top: 20px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  font-family: 'Metamorphous';
+}
+.regBut:hover {
+  opacity: 1;
+  font-family: 'Metamorphous';
+  color: red;
+}
