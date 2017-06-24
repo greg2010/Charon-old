@@ -110,7 +110,7 @@ h1 {
   /*margin-left: 40px;
     margin-right: 40px;*/
 }
-.loginWrap .loginBut {
+.loginWrap .loginBtn {
   text-transform: uppercase;
   /*opacity: 0.5;*/
   font-family: 'Metamorphous';
@@ -121,7 +121,7 @@ h1 {
   font-size: 20px;
   margin-bottom: 30px;
 }
-.loginWrap .loginBut:hover {
+.loginWrap .loginBtn:hover {
   opacity: 1;
   font-family: 'Metamorphous';
   color: red;
