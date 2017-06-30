@@ -103,7 +103,13 @@ h1{
   width: 80%;
 }
 
+.loginError{
 
+  margin-top: 20px;
+  text-align: center;
+  color: #ff1600;
+  font-size: 20px;
+}
 
 
 .loginWrap{
@@ -155,6 +161,13 @@ h1{
     height: 40px;
     font-size: 20px;
     margin-bottom: 30px;
+
+    &:disabled{
+      color: grey;
+      &:hover{
+        color: grey;
+      }
+    }
 
     &:hover{
       opacity: 1;

@@ -1,16 +1,29 @@
 /**
  * Created by Donner on 21.06.2017.
  */
-const initialState = [];
-
-export default function somereducer(state = initialState, action) {
-    if (action.type === 'ADD_TRACK') {
-        return [
-            ...state,
-            action.payload
-        ];
-    } else if (action.type === 'FETCH_TRACKS_SUCCESS') {
-        return action.payload;
+const initialState = {
+    loginState: {
+        errorResponse : '',
+        login: '',
+        password: '',
+        disabled: ''
     }
-    return state;
+};
+
+export default function someReducer(state = initialState, action) {
+    if (action.type === 'START') {
+        return {
+            ...state
+        };
+    } else if (action.type === 'BTN_LOGIN'){
+        const loginState = action.payload;
+        return {...state, loginState}
+    } else if (action.type === 'CLEAR_STATUS'){
+        const loginState = action.payload;
+        return {...state, loginState}
+    } else if (action.type === 'DISABLE_BTN'){
+        const loginState = action.payload;
+        return {...state, loginState}
+    }
+        return state;
 }

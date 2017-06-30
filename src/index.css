@@ -74,6 +74,12 @@ h1 {
   height: 80%;
   width: 80%;
 }
+.loginError {
+  margin-top: 20px;
+  text-align: center;
+  color: #ff1600;
+  font-size: 20px;
+}
 .loginWrap {
   border: dashed 1px grey;
   border-radius: 20px;
@@ -120,6 +126,12 @@ h1 {
   height: 40px;
   font-size: 20px;
   margin-bottom: 30px;
+}
+.loginWrap .loginBtn:disabled {
+  color: grey;
+}
+.loginWrap .loginBtn:disabled:hover {
+  color: grey;
 }
 .loginWrap .loginBtn:hover {
   opacity: 1;
