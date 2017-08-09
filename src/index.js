@@ -19,6 +19,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import About from './components/About';
 import NotFound from './components/NotFound';
+import Auth from './components/Auth';
 import App from './components/App';
 
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
@@ -45,6 +46,7 @@ ReactDOM.render(
 
                     <Route path="login" component={Login}/>
                     <Route path="about" component={About}/>
+                    <Route path="auth/:code" component={Auth}/>
                     {/*<Route path="register" component={Register} />*/}
                     <Route path="*" component={NotFound}/>
                     <IndexRoute component={Home}/>
