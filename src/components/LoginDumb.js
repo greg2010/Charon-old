@@ -23,7 +23,9 @@ export default class LoginDumb extends Component {
                     <p className="loginTitle">log in </p>
 
 
-                    <a href="https://login.eveonline.com/oauth/authorize/?response_type=code&redirect_uri=http://coalition.alliance.red:3000/auth/code&client_id=8e3260c3ebe64414b365c85044989259"><img src="https://images.contentful.com/idjq7aai9ylm/4fSjj56uD6CYwYyus4KmES/4f6385c91e6de56274d99496e6adebab/EVE_SSO_Login_Buttons_Large_Black.png?w=270&h=45" alt=""/></a>
+                    {/*<a href="https://login.eveonline.com/oauth/authorize/?response_type=code&redirect_uri=http://coalition.alliance.red:3000/auth/code&client_id=8e3260c3ebe64414b365c85044989259"><img src="https://images.contentful.com/idjq7aai9ylm/4fSjj56uD6CYwYyus4KmES/4f6385c91e6de56274d99496e6adebab/EVE_SSO_Login_Buttons_Large_Black.png?w=270&h=45" alt=""/></a>*/}
+                    <a href="https://login.eveonline.com/oauth/authorize/?response_type=code&redirect_uri=http://coalition.alliance.red:3000/auth/code&client_id=66aa76d1fb8f41f5a44ad4a4c4121135&scope=characterAccountRead&state=uniquestate123"><img src="https://images.contentful.com/idjq7aai9ylm/4fSjj56uD6CYwYyus4KmES/4f6385c91e6de56274d99496e6adebab/EVE_SSO_Login_Buttons_Large_Black.png?w=270&h=45" alt=""/></a>
+
                     
                    {/* <p className="">ingame name/email</p>
                     <input className="col-md-10 col-md-offset-1 login" type="text" />

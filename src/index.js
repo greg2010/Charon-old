@@ -17,9 +17,11 @@ import './index.css';
 import Main from './components/Main';
 import Home from './components/Home';
 import Login from './components/Login';
+import LogOut from './components/LogOut';
 import About from './components/About';
 import NotFound from './components/NotFound';
 import Auth from './components/Auth';
+import Test from './components/Test'
 import App from './components/App';
 
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
@@ -47,6 +49,8 @@ ReactDOM.render(
                     <Route path="login" component={Login}/>
                     <Route path="about" component={About}/>
                     <Route path="auth/:code" component={Auth}/>
+                    <Route path="logout" component={LogOut}/>
+                    <Route path="test" component={Test}/>
                     {/*<Route path="register" component={Register} />*/}
                     <Route path="*" component={NotFound}/>
                     <IndexRoute component={Home}/>
