@@ -6,7 +6,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import {syncHistoryWithStore} from 'react-router-redux';
 import thunk from 'redux-thunk';
-import axios from 'axios';
+
 
 import reducer from './reducers';
 
@@ -22,7 +22,7 @@ import About from './components/About';
 import NotFound from './components/NotFound';
 import Auth from './components/Auth';
 import Test from './components/Test'
-import App from './components/App';
+
 
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
 /*const store = createStore(reducer, composeWithDevTools(applyMiddleware()));*/

@@ -7,8 +7,9 @@ class LogOut extends Component {
     componentDidMount(){
         localStorage.clear();
 
-        setTimeout( function() { browserHistory.push('/');}.bind(this), 1000 );
-    }
+        /*setTimeout( function() { browserHistory.push('/');}.bind(this), 1000 );*/
+        setTimeout( function() { browserHistory.push('/');}, 1000 )
+}
 
 
     render() {
