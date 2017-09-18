@@ -12,8 +12,16 @@ const initialState = {
 
 export default function someReducer(state = initialState, action) {
     if (action.type === 'START') {
+        const mainPageState ={
+            discordBtn_disabled: '',
+            teamspeakBtn_disabled: '',
+            discordErrorResponse: '',
+            teamspeakErrorResponse: '',
+        };
+
         return {
-            ...state
+            ...state, mainPageState
+
         };
     } else if (action.type === 'BTN_LOGIN'){
         const loginState = action.payload;
@@ -24,6 +32,21 @@ export default function someReducer(state = initialState, action) {
     } else if (action.type === 'DISABLE_BTN'){
         const loginState = action.payload;
         return {...state, loginState}
+    } else if (action.type === 'DISCORD_DISABLE_BTN'){
+        const mainPageState = action.payload;
+        return {...state, mainPageState}
+    } else if (action.type === 'MAINPAGE_CLEAR_STATUS'){
+        const mainPageState = action.payload;
+        return {...state, mainPageState}
+    } else if (action.type === 'BTN_DISCORD_ERR'){
+        const mainPageState = action.payload;
+        return {...state, mainPageState}
+    } else if (action.type === 'TEAMSPEAK_DISABLE_BTN') {
+        const mainPageState = action.payload;
+        return {...state, mainPageState};
+    } else if (action.type === 'BTN_TEAMSPEAK_ERR') {
+        const mainPageState = action.payload;
+        return {...state, mainPageState}
     }
         return state;
 }
