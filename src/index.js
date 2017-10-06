@@ -30,6 +30,8 @@ const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
 store.dispatch({type: 'START'});
 
 
+
+
 const history = syncHistoryWithStore(browserHistory, store);
 
 /*
@@ -39,6 +41,10 @@ const history = syncHistoryWithStore(browserHistory, store);
 
  */
 
+
+/*console.log(process.env.REACT_APP_SECRET_CODE);
+console.log(process.env.REACT_APP_SSO_REDIRECT);
+console.log(process.env.REACT_APP_SSO_CLIENT_ID);*/
 
 ReactDOM.render(
     <Provider store={store}>

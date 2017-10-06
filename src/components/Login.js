@@ -16,6 +16,9 @@ export class Login extends Component {
 
 
 
+
+
+
     loginClick() {
     const userName = document.querySelectorAll('.login')[0].value;
     const password = document.querySelectorAll('.password')[0].value;
@@ -65,8 +68,10 @@ export class Login extends Component {
 
     render() {
 
+        const SSO ='https://login.eveonline.com/oauth/authorize/?response_type=code&redirect_uri='+process.env.REACT_APP_SSO_REDIRECT+'&client_id='+process.env.REACT_APP_SSO_CLIENT_ID+'&scope=characterAccountRead&state=uniquestate123';
+
         return (
-            <LoginDumb lgn={this.loginClick} sLogin={this.props.sLogin} disabled={this.props.disabled} login={''}/>
+            <LoginDumb SSO={SSO}  lgn={this.loginClick} sLogin={this.props.sLogin} disabled={this.props.disabled} login={''}/>
         );
     }
 }
