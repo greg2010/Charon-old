@@ -29,7 +29,7 @@ class Home extends Component {
             }
         };
         console.log('discord point');
-        axios.post(process.env.REACT_APP_BACKEND_BASE+'/v1/user/self/logout',{}, config)
+        axios.post(process.env.REACT_APP_BACKEND_BASE_URL+'/v1/user/self/logout',{}, config)
             .then(function (response) {
                 console.log('discord ok');
                 console.log(response);
@@ -79,7 +79,7 @@ class Home extends Component {
             }
         };
         console.log('teamspeak point');
-        axios.post(process.env.REACT_APP_BACKEND_BASE+'/v1/user/self/logout',{}, config)
+        axios.post(process.env.REACT_APP_BACKEND_BASE_URL+'/v1/user/self/logout',{}, config)
 
             .then(function (response) {
                 console.log('teamspeak ok');

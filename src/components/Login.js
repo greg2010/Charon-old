@@ -32,7 +32,7 @@ export class Login extends Component {
 
     store.dispatch(disableBtn);
 
-    axios.get(process.env.REACT_APP_BACKEND_BASE+'/v1/auth/login/legacy?name_or_email=' + userName + '&password=' + password)
+    axios.get(process.env.REACT_APP_BACKEND_BASE_URL+'/v1/auth/login/legacy?name_or_email=' + userName + '&password=' + password)
         .then(function (response) {
         })
         .catch(function (error) {
