@@ -16,7 +16,7 @@ class Auth extends Component {
 
         axios({
             method: 'post',
-            url: 'https://api.red.greg2010.me/v1/auth/login/sso',
+            url: process.env.REACT_APP_BASE_URL+'/v1/auth/login/sso',
             crossDomain: true,
             headers: {
                 /*'Content-Type' : 'application/json',*/
