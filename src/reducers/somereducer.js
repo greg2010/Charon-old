@@ -2,27 +2,61 @@
  * Created by Donner on 21.06.2017.
  */
 const initialState = {
+
     loginState: {
         errorResponse : '',
         login: '',
         password: '',
         disabled: ''
+    },
+
+    mainPageState : {
+        discordBtn_disabled: '',
+        teamspeakBtn_disabled: '',
+        discordErrorResponse: '',
+        teamspeakErrorResponse: '',
+
+    },
+
+    teamSpeakPageState :{
+    chars: [],
+    status: '',
+    deleteBtn_disabled: '1',
+    registerBtn_disabled: '1',
+    teamSpeakUserName:'',
     }
+
 };
 
 export default function someReducer(state = initialState, action) {
-    if (action.type === 'START') {
+/*    if (action.type === 'START') {
         const mainPageState ={
             discordBtn_disabled: '',
             teamspeakBtn_disabled: '',
             discordErrorResponse: '',
             teamspeakErrorResponse: '',
+
         };
 
+        const teamSpeakPageState={
+            chars: [],
+            status: '',
+            deleteBtn_disabled: '1',
+            registerBtn_disabled: '1',
+            teamSpeakUserName:'',
+        };
         return {
-            ...state, mainPageState
+            ...state, mainPageState, teamSpeakPageState
 
         };
+    } */
+
+    if (action.type === 'DISPATCH_TEAMSPEAK'){
+
+        //const teamSpeakPageState = Object.assign(state.teamSpeakPageState,action.payload);
+        // console.log('storage state', {...state.teamSpeakPageState});
+        const teamSpeakPageState = action.payload;
+        return {...state, teamSpeakPageState}
     } else if (action.type === 'BTN_LOGIN'){
         const loginState = action.payload;
         return {...state, loginState}

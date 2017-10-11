@@ -29,7 +29,9 @@ class Menu extends Component {
 
 
                     <ul className="topleft">
+
                         <li><Link to="/logout" activeClassName="red">logout</Link></li>
+                        <li><Link to="/teamspeak" activeClassName="red">TeamSpeak</Link></li>
                         <li><IndexLink to="/" activeClassName="red">home</IndexLink></li>
                         <li><Link to="/about" activeClassName="red">about</Link></li>
                     </ul>
