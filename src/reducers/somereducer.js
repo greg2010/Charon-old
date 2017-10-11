@@ -19,7 +19,7 @@ const initialState = {
     },
 
     teamSpeakPageState :{
-    chars: [],
+    chars: '',
     status: '',
     deleteBtn_disabled: '1',
     registerBtn_disabled: '1',
@@ -53,9 +53,9 @@ export default function someReducer(state = initialState, action) {
 
     if (action.type === 'DISPATCH_TEAMSPEAK'){
 
-        //const teamSpeakPageState = Object.assign(state.teamSpeakPageState,action.payload);
+        const teamSpeakPageState = Object.assign(state.teamSpeakPageState,action.payload);
         // console.log('storage state', {...state.teamSpeakPageState});
-        const teamSpeakPageState = action.payload;
+        //const teamSpeakPageState = action.payload;
         return {...state, teamSpeakPageState}
     } else if (action.type === 'BTN_LOGIN'){
         const loginState = action.payload;

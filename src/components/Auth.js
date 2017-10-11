@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {browserHistory} from 'react-router';
-
+import getChars from './Teamspeak'
+import {getTSstatus} from './Teamspeak';
 
 class Auth extends Component {
 
@@ -47,6 +48,10 @@ class Auth extends Component {
                         .then(function (response) {
                             console.log(response.data[0].character_name);
                             localStorage.setItem('currentCharacterName',response.data[0].character_name);
+
+                            getChars();
+                            getTSstatus();
+
                             browserHistory.push('/');
 
                         })

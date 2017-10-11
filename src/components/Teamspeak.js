@@ -34,7 +34,6 @@ const getChars = () => {
 
            console.log(charList);
              const action = {
-                 //type: 'SET_TEAMSPEAK_AVAIBLE_CHARS',
                  type: 'DISPATCH_TEAMSPEAK',
                  payload: {
                      chars: charList,
@@ -46,19 +45,54 @@ const getChars = () => {
         .catch(function (error) {
             console.log('axios chars error');
             console.log(error.response);
-            // const res = error.response;
-            /*const action = {
-                type: 'BTN_DISCORD_ERR',
-                payload: {
-                    discordErrorResponse: res,
-                    discordBtn_disabled: ''
-                }
-            };
-            store.dispatch(action);*/
         });
 
-}
+};
 
+
+export const getTSstatus = () => {
+    console.log('getTSstatus');
+
+    const config = {
+        headers: {
+            'Content-Type':'application/json',
+            'Authorization':'bearer '+localStorage.getItem("accessToken"),
+        }
+    };
+    console.log('getTSstatus request');
+    axios.get(process.env.REACT_APP_BACKEND_BASE_URL+'/v1/user/self/teamspeak', config)
+        .then(function (response) {
+            console.log('getTSstatus response');
+            console.log(response);
+            const status = response.status;
+
+            console.log(status);
+            const action = {
+                type: 'DISPATCH_TEAMSPEAK',
+                payload: {
+                    status: status,
+                }
+            };
+            store.dispatch(action);
+
+        })
+        .catch(function (error) {
+            console.log('getTSstatus error');
+            console.log(error.response.statusText);
+            const action = {
+                type: 'DISPATCH_TEAMSPEAK',
+                payload: {
+                    status: error.response.statusText,
+                }
+            };
+            store.dispatch(action);
+
+
+
+
+        });
+
+};
 
 
 export default getChars;
