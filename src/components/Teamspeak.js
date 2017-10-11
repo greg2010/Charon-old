@@ -44,7 +44,7 @@ export const putAthuReuest = () => {
         }
     };
     console.log('ts reg point');
-    axios.put(process.env.REACT_APP_BACKEND_BASE_URL + '/v1/user/self/teamspeak?characterId='+val, config)
+    axios.put(process.env.REACT_APP_BACKEND_BASE_URL + '/v1/user/self/teamspeak?characterId='+val,{}, config)
         .then(function (response) {
             console.log('ts reg ok');
             console.log(response.data);
