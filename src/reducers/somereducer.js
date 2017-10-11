@@ -21,8 +21,8 @@ const initialState = {
     teamSpeakPageState :{
     chars: '',
     status: '',
-    deleteBtn_disabled: '1',
-    registerBtn_disabled: '1',
+    deleteBtn_disabled: '',
+    registerBtn_disabled: '',
     teamSpeakUserName:'',
     }
 

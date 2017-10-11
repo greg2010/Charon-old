@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Parser from 'html-react-parser';
 // import { render } from 'react-dom';
 import getChars from './Teamspeak'
-import {getTSstatus} from './Teamspeak';
+import {getTSstatus, putAthuReuest} from './Teamspeak';
 
 
 class TeamSpeakPage extends Component {
@@ -39,22 +39,27 @@ class TeamSpeakPage extends Component {
             });
             console.log('Select ', select);
         }
+
+
+
         return (
             <div className="teamSpeakCont">
 
                 <p>TeamSpeak registration state: {this.props.teamspeakRegistarationStatus}</p>
 
 
-                <form action="">
 
-                    <span>Avaibale characters to register at TeamSpeak:</span>
-                    <select>
+
+                    <span>Available characters for register at TeamSpeak:</span>
+                    <select id='tsReg' name='tsReg'>
                         {Parser(select)}
                     </select>
-                </form>
 
+                    <button disabled={this.props.tsRegBtndisabled} onClick={putAthuReuest}>Регистрируй меня полностью!</button> <span>Я так хочу!:</span>
 
-                <button disabled='1'>Delete TS reg</button>
+                <br/>
+                <p>Тут будет какой то текст про удаление</p>
+                <button disabled={this.props.tsDelBtndisabled}>Delete TS reg</button>
 
             </div>
         );
@@ -66,6 +71,9 @@ const mapStateToProps = function (store) {
     return {
         teamspeakCharsAvailabe: store.somereducer.teamSpeakPageState.chars,
         teamspeakRegistarationStatus: store.somereducer.teamSpeakPageState.status,
+        tsRegBtndisabled: store.somereducer.teamSpeakPageState.registerBtn_disabled,
+        tsDelBtndisabled: store.somereducer.teamSpeakPageState.deleteBtn_disabled,
+
     }
 };
 export default connect(mapStateToProps)(TeamSpeakPage);
